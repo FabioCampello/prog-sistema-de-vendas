@@ -79,7 +79,7 @@ public class PrincipalForm extends JFrame {
 		menuSobre.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				String sobre = "Sistema de Vendas - ver. 0.0.1 \n Desenvolvido por: Fábio Campêllo";
+				String sobre = "Sistema de Vendas - ver. 0.0.3 \n Desenvolvido por: Fábio Campêllo \n Email: fabiocampello@outlook.com.br";
 				JOptionPane.showMessageDialog(rootPane, sobre, "AJYA Informática LTDA",
 						JOptionPane.INFORMATION_MESSAGE);
 			}
