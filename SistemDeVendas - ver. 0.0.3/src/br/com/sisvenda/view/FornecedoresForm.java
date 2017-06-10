@@ -29,7 +29,7 @@ import br.com.sisvenda.controller.FornecedorController;
 public class FornecedoresForm extends JFrame {
 
 	// ************************************************************************************************************
-	// DECLARA√á√ÉO DE VARI√ÅVEIS
+	// DECLARA«√O DE VARI¡VEIS
 	// ************************************************************************************************************
 	private JPanel contentPane;
 	private JTextField jtfPesquisar;
@@ -53,7 +53,7 @@ public class FornecedoresForm extends JFrame {
 	private static ResultSet rs;
 
 	// ************************************************************************************************************
-	// M√âTODO PRINCIPAL
+	// M…TODO PRINCIPAL
 	// ************************************************************************************************************
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -99,7 +99,7 @@ public class FornecedoresForm extends JFrame {
 		jtfPesquisar.setColumns(10);
 
 		// **************************************************************
-		// BOT√ÉO PESQUISAR
+		// BOT√O PESQUISAR
 		// **************************************************************
 		JButton btnPersquisar = new JButton("Pesquisar");
 		btnPersquisar.setBounds(369, 10, 107, 23);
@@ -119,7 +119,7 @@ public class FornecedoresForm extends JFrame {
 		panel.add(scrollPane);
 
 		// **************************************************************
-		// TABELA DE EXIBI√á√ÉO DE FORNECEDOR
+		// TABELA DE EXIBI«√O DE FORNECEDOR
 		// **************************************************************
 		table = new JTable(new DefaultTableModel(new Object[][] { { null, null, null }, },
 				new String[] { "nome", "endereco", "numero", "bairro", "cidade", "uf", "cep", "telefone" }));
@@ -153,7 +153,7 @@ public class FornecedoresForm extends JFrame {
 		jtfNome.setColumns(10);
 
 		// **************************************************************
-		// CAMPO DE TEXTO ENDERE√áO
+		// CAMPO DE TEXTO ENDERE«O
 		// **************************************************************
 		JLabel lblEndereo = new JLabel("Endere\u00E7o:");
 		lblEndereo.setBounds(122, 259, 60, 15);
@@ -165,7 +165,7 @@ public class FornecedoresForm extends JFrame {
 		jtfEndereco.setColumns(10);
 
 		// **************************************************************
-		// CAMPO DE TEXTO N√öMERO
+		// CAMPO DE TEXTO N⁄MERO
 		// **************************************************************
 		JLabel lblNmero = new JLabel("N\u00FAmero:");
 		lblNmero.setBounds(510, 259, 70, 14);
@@ -239,7 +239,7 @@ public class FornecedoresForm extends JFrame {
 		panel.add(jcbUf);
 
 		// ************************************************************************************************************
-		// M√âTODO QUE INSERIRE UM NOVO FORNECEDOR
+		// M…TODO QUE INSERIRE UM NOVO FORNECEDOR
 		// ************************************************************************************************************
 		btnNovo = new JButton("Novo");
 		btnNovo.addActionListener(new ActionListener() {
@@ -254,7 +254,7 @@ public class FornecedoresForm extends JFrame {
 							|| jtfCEP.getText().isEmpty() || jtfTelefone.getText().isEmpty()) {
 
 						JOptionPane.showMessageDialog(rootPane, "Informe todos os dados do fornecedor!",
-								"ERRO DE UTILIZA√á√ÇO", JOptionPane.ERROR_MESSAGE);
+								"ERRO DE UTILIZA«¬O", JOptionPane.ERROR_MESSAGE);
 
 					} else {
 
@@ -294,14 +294,14 @@ public class FornecedoresForm extends JFrame {
 		panel.add(btnNovo);
 
 		// ******************************************************************************************************************************
-		// EVENTO DO BOT√ÉO ALTERAR
+		// EVENTO DO BOT√O ALTERAR
 		// ******************************************************************************************************************************
 		btnAlterar = new JButton("Alterar");
 		btnAlterar.setBounds(349, 385, 89, 43);
 		panel.add(btnAlterar);
 
 		// ******************************************************************************************************************************
-		// EVENTO DO BOT√ÉO EXCLUIR
+		// EVENTO DO BOT√O EXCLUIR
 		// ******************************************************************************************************************************
 		btnExcluir = new JButton("Excluir");
 		btnExcluir.addActionListener(new ActionListener() {
@@ -313,7 +313,7 @@ public class FornecedoresForm extends JFrame {
 
 					if (jcbNomeForncedor.getSelectedItem() == "") {
 
-						JOptionPane.showMessageDialog(rootPane, "Selecione um nome de fornecedor!", "ERRO DE UTILIZA√á√ÇO",
+						JOptionPane.showMessageDialog(rootPane, "Selecione um nome de fornecedor!", "ERRO DE UTILIZA«¬O",
 								JOptionPane.ERROR_MESSAGE);
 
 					} else {
@@ -329,7 +329,7 @@ public class FornecedoresForm extends JFrame {
 					}
 
 				} catch (Exception e) {
-					JOptionPane.showMessageDialog(rootPane, e, "ERRO DE UTILIZA√á√ÇO", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(rootPane, e, "ERRO DE UTILIZA«¬O", JOptionPane.ERROR_MESSAGE);
 				}
 
 			}
@@ -338,7 +338,7 @@ public class FornecedoresForm extends JFrame {
 		panel.add(btnExcluir);
 
 		// ******************************************************************************************************************************
-		// EVENTO DO BOT√ÉO FECHAR
+		// EVENTO DO BOT√O FECHAR
 		// ******************************************************************************************************************************
 		btnFechar = new JButton("Fechar");
 		btnFechar.addActionListener(new ActionListener() {
@@ -355,7 +355,7 @@ public class FornecedoresForm extends JFrame {
 	}
 
 	// ******************************************************************************************************************************
-	// M√âTODO DE COSNSTRU√á√ÉO DA TABELA COM OS RESULTADOS DO BANCO
+	// M…TODO DE COSNSTRU«√O DA TABELA COM OS RESULTADOS DO BANCO
 	// ******************************************************************************************************************************
 	private void loadTable() {
 
@@ -398,7 +398,7 @@ public class FornecedoresForm extends JFrame {
 	}
 
 	// ******************************************************************************************************************************
-	// M√âTODO QUE INSERE OS NOMES DOS CURSOS NO JCOMBOBOX NOME CURSO
+	// M…TODO QUE INSERE OS NOMES DOS CURSOS NO JCOMBOBOX NOME CURSO
 	// ******************************************************************************************************************************
 	static private void loadCombo() {
 
@@ -409,7 +409,7 @@ public class FornecedoresForm extends JFrame {
 
 			rs = con.createStatement().executeQuery(cmdcb);
 
-			// AQUI √â PARA EXEIBIR ALGUMA MENSAGEM DE ERRO PARA O DESENVOLVEDOR,
+			// AQUI … PARA EXEIBIR ALGUMA MENSAGEM DE ERRO PARA O DESENVOLVEDOR,
 			// SE HOUVER
 			System.out.println(cmdcb);
 			System.out.println(rs);
@@ -418,14 +418,14 @@ public class FornecedoresForm extends JFrame {
 
 				String nomeDB = rs.getString("nome");
 
-				// EST√Å OP√á√ÉO - MOSTRA NO COMBOBOX CURSO SOMENTE O NOME DO CURSO
+				// EST¡ OP«√O - MOSTRA NO COMBOBOX CURSO SOMENTE O NOME DO CURSO
 				((DefaultComboBoxModel) jcbNomeForncedor.getModel()).addElement(nomeDB);
 
 			}
 
 		} catch (SQLException e) {
 			String msg = "Erro! Tpipo " + e.getMessage();
-			JOptionPane.showMessageDialog(null, msg, "ERRO DE UTILIZA√á√ÇO", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, msg, "ERRO DE UTILIZA«¬O", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 }
