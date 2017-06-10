@@ -78,7 +78,7 @@ public class PrincipalForm extends JFrame {
 		JMenuItem menuSobre = new JMenuItem("Sobre o Sistema");
 		menuSobre.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 				String sobre = "Sistema de Vendas - ver. 0.0.3 \n Desenvolvido por: Fábio Campêllo \n Email: fabiocampello@outlook.com.br";
 				JOptionPane.showMessageDialog(rootPane, sobre, "AJYA Informática LTDA",
 						JOptionPane.INFORMATION_MESSAGE);
@@ -86,7 +86,7 @@ public class PrincipalForm extends JFrame {
 		});
 		menuOpcoes.add(menuSobre);
 
-		//SEPARADORES DOS ITENS DO MENU
+		// SEPARADORES DOS ITENS DO MENU
 		JSeparator separator = new JSeparator();
 		menuOpcoes.add(separator);
 
@@ -190,7 +190,8 @@ public class PrincipalForm extends JFrame {
 			}
 		});
 		btnClientes.setHorizontalAlignment(SwingConstants.LEFT);
-		btnClientes.setIcon(new ImageIcon("F:\\Projetos\\Projetos Java\\Projetos Eclipse\\Workspace\\SistemDeVendas - ver. 0.0.3\\imagens\\clientes.gif"));
+		btnClientes.setIcon(new ImageIcon(
+				"F:\\Projetos\\Projetos Java\\Projetos Eclipse\\Workspace\\SistemDeVendas - ver. 0.0.3\\imagens\\clientes.gif"));
 
 		// **************************************************************
 		// EVENTO DO BOTÃO FORNECEDORES
@@ -204,7 +205,8 @@ public class PrincipalForm extends JFrame {
 			}
 		});
 		btnFornecedores.setHorizontalAlignment(SwingConstants.LEFT);
-		btnFornecedores.setIcon(new ImageIcon("F:\\Projetos\\Projetos Java\\Projetos Eclipse\\Workspace\\SistemDeVendas - ver. 0.0.3\\imagens\\fornecedores.gif"));
+		btnFornecedores.setIcon(new ImageIcon(
+				"F:\\Projetos\\Projetos Java\\Projetos Eclipse\\Workspace\\SistemDeVendas - ver. 0.0.3\\imagens\\fornecedores.gif"));
 
 		// **************************************************************
 		// EVENTO DO BOTÃO PRODUTOS
@@ -218,7 +220,8 @@ public class PrincipalForm extends JFrame {
 			}
 		});
 		btnProdutos.setHorizontalAlignment(SwingConstants.LEFT);
-		btnProdutos.setIcon(new ImageIcon("F:\\Projetos\\Projetos Java\\Projetos Eclipse\\Workspace\\SistemDeVendas - ver. 0.0.3\\imagens\\produtos.gif"));
+		btnProdutos.setIcon(new ImageIcon(
+				"F:\\Projetos\\Projetos Java\\Projetos Eclipse\\Workspace\\SistemDeVendas - ver. 0.0.3\\imagens\\produtos.gif"));
 
 		// **************************************************************
 		// EVENTO DO BOTÃO REGISTRAR VENDAS
@@ -232,7 +235,8 @@ public class PrincipalForm extends JFrame {
 			}
 		});
 		btnVendas.setHorizontalAlignment(SwingConstants.LEFT);
-		btnVendas.setIcon(new ImageIcon("F:\\Projetos\\Projetos Java\\Projetos Eclipse\\Workspace\\SistemDeVendas - ver. 0.0.3\\imagens\\vendas.gif"));
+		btnVendas.setIcon(new ImageIcon(
+				"F:\\Projetos\\Projetos Java\\Projetos Eclipse\\Workspace\\SistemDeVendas - ver. 0.0.3\\imagens\\vendas.gif"));
 
 		// **************************************************************
 		// EVENTO DO BOTÃO CONSULTAR VENDAS
@@ -245,9 +249,10 @@ public class PrincipalForm extends JFrame {
 				consultarVendas();
 			}
 		});
-		btnConsultarVendas.setIcon(new ImageIcon("F:\\Projetos\\Projetos Java\\Projetos Eclipse\\Workspace\\SistemDeVendas - ver. 0.0.3\\imagens\\vendas.gif"));
+		btnConsultarVendas.setIcon(new ImageIcon(
+				"F:\\Projetos\\Projetos Java\\Projetos Eclipse\\Workspace\\SistemDeVendas - ver. 0.0.3\\imagens\\vendas.gif"));
 		btnConsultarVendas.setHorizontalAlignment(SwingConstants.LEFT);
-		
+
 		JLayeredPane layeredPane = new JLayeredPane();
 		layeredPane.setBounds(248, 50, 1, 1);
 		contentPane.add(layeredPane);

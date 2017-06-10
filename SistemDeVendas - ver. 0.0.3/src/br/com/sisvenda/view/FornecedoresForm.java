@@ -268,7 +268,7 @@ public class FornecedoresForm extends JFrame {
 						String telefone = jtfTelefone.getText();
 
 						fc.inserirFornecedor(nome, endereco, numero, bairro, cidade, uf, cep, telefone);
-						
+
 						JOptionPane.showMessageDialog(rootPane, "Fornecedor salvo com sucesso!", "DADOS GRAVADOS",
 								JOptionPane.INFORMATION_MESSAGE);
 
@@ -304,6 +304,36 @@ public class FornecedoresForm extends JFrame {
 		// EVENTO DO BOTÃO EXCLUIR
 		// ******************************************************************************************************************************
 		btnExcluir = new JButton("Excluir");
+		btnExcluir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+
+				FornecedorController fc = new FornecedorController();
+
+				try {
+
+					if (jcbNomeForncedor.getSelectedItem() == "") {
+
+						JOptionPane.showMessageDialog(rootPane, "Selecione um nome de fornecedor!", "ERRO DE UTILIZAÇÂO",
+								JOptionPane.ERROR_MESSAGE);
+
+					} else {
+
+						fc.excluirFornecedor((String) jcbNomeForncedor.getSelectedItem());
+
+						new FornecedoresForm().setVisible(true);
+						dispose();
+
+						JOptionPane.showMessageDialog(rootPane, "Fornecedor excluido com sucesso!", "DADOS EXCLUIDOS",
+								JOptionPane.INFORMATION_MESSAGE);
+
+					}
+
+				} catch (Exception e) {
+					JOptionPane.showMessageDialog(rootPane, e, "ERRO DE UTILIZAÇÂO", JOptionPane.ERROR_MESSAGE);
+				}
+
+			}
+		});
 		btnExcluir.setBounds(463, 385, 89, 43);
 		panel.add(btnExcluir);
 
@@ -373,7 +403,7 @@ public class FornecedoresForm extends JFrame {
 	static private void loadCombo() {
 
 		try {
-			
+
 			Connection con = ConexaoMySQL.getInstance().getConnection();
 			cmdcb = "select nome from fornecedores";
 
